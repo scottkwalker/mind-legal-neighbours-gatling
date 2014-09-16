@@ -1,4 +1,4 @@
-import Scenarios.humanUsers
+import Scenarios.{humanUsers, serviceUsers}
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
@@ -13,7 +13,8 @@ class Simulate extends Simulation {
     .userAgentHeader("Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0")
 
   setUp(
-    humanUsers.inject(atOnceUsers(1))
+    humanUsers.inject(atOnceUsers(1)),
+    serviceUsers.inject(atOnceUsers(1))
   ).
     protocols(httpConf)
 }

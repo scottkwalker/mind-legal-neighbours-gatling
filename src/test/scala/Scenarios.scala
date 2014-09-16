@@ -9,4 +9,11 @@ object Scenarios {
       Browse.healthCheck,
       Browse.legalNeighbours
     )
+
+  val serviceUsers = scenario("Lookup values").
+    exec(
+      Lookup.`return bad request when submission is empty`,
+      Lookup.`return ok with seq of ids when submission is valid and legal moves are found`,
+      Lookup.`return empty seq when submission is valid but no matches are in scope`
+    )
 }

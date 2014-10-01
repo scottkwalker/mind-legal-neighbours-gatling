@@ -7,3 +7,5 @@ resolvers += "sonatype-releases" at "https://oss.sonatype.org/content/repositori
 resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
 
 addSbtPlugin("io.gatling" % "sbt-plugin" % "1.0-RC5")
+
+addSbtPlugin("com.typesafe.sbt" % "sbt-git" % "0.6.4")

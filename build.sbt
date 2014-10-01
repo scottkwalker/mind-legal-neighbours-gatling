@@ -11,4 +11,5 @@ lazy val root = (project in file(".")).
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "2.1.6" % "test",
   "io.gatling.highcharts" % "gatling-charts-highcharts" % "2.0.0-RC3" % "test",
-  "io.gatling" % "test-framework" % "1.0-RC3" % "test")
+  "io.gatling" % "test-framework" % "1.0-RC3" % "test",
+  "com.typesafe.play" %% "play-json" % "2.4.0-M1")

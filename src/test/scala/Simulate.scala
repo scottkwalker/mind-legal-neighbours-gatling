@@ -1,4 +1,4 @@
-import Scenarios.{humanUsers, serviceUsers}
+import Scenarios.{humanUsers, serviceUsers, load}
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
@@ -14,7 +14,8 @@ class Simulate extends Simulation {
 
   setUp(
     humanUsers.inject(atOnceUsers(1)),
-    serviceUsers.inject(atOnceUsers(1))
+    serviceUsers.inject(atOnceUsers(1)),
+    load.inject(atOnceUsers(1000))
   ).
     protocols(httpConf)
 }

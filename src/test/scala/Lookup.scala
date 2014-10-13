@@ -1,5 +1,6 @@
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
+import io.gatling.http.request.StringBody
 import play.api.libs.json._
 
 object Lookup {
@@ -38,14 +39,7 @@ object Lookup {
     val asString = Json.stringify(asJson)
     val input = StringBody(asString)
     val expected = Json.stringify(JsArray(Seq(JsNumber(7))))
-    exec(
-      http("call legal-neighbours and get expected value").
-        post("/mind/legal-neighbours").
-        body(input).asJSON.
-        // Assertions
-        check(status.is(200)).
-        check(bodyString.is(expected))
-    )
+    post(input, expected)
   }
 
   val `return empty seq when submission is valid but no matches are in scope` = {
@@ -75,6 +69,10 @@ object Lookup {
 
     val input = StringBody(asString)
     val expected = Json.stringify(JsArray(Seq.empty))
+    post(input, expected)
+  }
+
+  private def post(input: StringBody, expected: String) =
     exec(
       http("call legal-neighbours and get expected value").
         post("/mind/legal-neighbours").
@@ -83,5 +81,4 @@ object Lookup {
         check(status.is(200)).
         check(bodyString.is(expected))
     )
-  }
 }

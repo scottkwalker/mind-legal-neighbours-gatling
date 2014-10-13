@@ -3,7 +3,11 @@ mind-legal-neighbours-gatling
 
 Gatling black box tests for my micro-service app. This app uses the Gatling-sbt plugin to add new commands to SBT. Run the micro-service first with `sbt run`, then run this project with `sbt gatling:test`.
 
+[![Stories in Backlog](https://badge.waffle.io/scottkwalker/mind-legal-neighbours-gatling.png?label=backlog&title=Backlog)](http://waffle.io/scottkwalker/mind-legal-neighbours-gatling)
+
 [![Stories in Ready](https://badge.waffle.io/scottkwalker/mind-legal-neighbours-gatling.png?label=ready&title=Ready)](http://waffle.io/scottkwalker/mind-legal-neighbours-gatling)
+
+[![Stories In Progress](https://badge.waffle.io/scottkwalker/mind-legal-neighbours-gatling.png?label=In%20Progress&title=In%20Progress)](http://waffle.io/scottkwalker/mind-legal-neighbours-gatling)
 
 Development prerequisites
 -----------------------

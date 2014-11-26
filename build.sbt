@@ -7,6 +7,8 @@ scalaVersion := "2.10.4"
 lazy val root = (project in file(".")).
   enablePlugins(GatlingPlugin)
 
+logLevel := Level.Warn
+
 // Change this to another test framework if you prefer
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "2.2.2" % "test",

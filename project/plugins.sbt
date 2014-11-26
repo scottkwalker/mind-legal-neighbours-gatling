@@ -1,7 +1,5 @@
 //SBT plugins used by the project build
 
-logLevel := Level.Debug
-
 resolvers += "sonatype-releases" at "https://oss.sonatype.org/content/repositories/releases/"
 
 resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
